@@ -1,0 +1,272 @@
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 1280px;
+  margin-left: auto;
+  padding-top: 100px;
+  padding-bottom: 420px;
+
+  background-size: 1280px;
+  background-color: #e7eaf2;
+  background-image:  url("../img/sofa_clear.png");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: center;
+}
+
+.gallery-size {
+  margin: 10px;
+  color: gray;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  text-align: center;
+}
+
+.gallery-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  outline: 1px dashed deeppink;
+  /* min-width: 700px; */
+  /* height: 300px; */
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 0;
+}
+
+.column--1 {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.column--4 {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.picture {
+  /* position: absolute; */
+  display: flex;
+  margin: 8px;
+  background-color: #9d9e9f;
+  box-shadow:#00000080 1px 2px 2px 0px;
+
+  /* Параметры текста */
+  color: lightgray;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.picture--active {
+  outline: 1px solid skyblue;
+  background-color: #8da0a8;
+}
+
+.rulers {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.picture-number {
+  margin: 5px;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.image--extra-big {
+  width: 166px;
+  height: 233px;
+}
+
+.image--big {
+  width: 133px;
+  height: 166px;
+}
+
+.image--medium {
+  width: 100px;
+  height: 133px;
+}
+
+.image--small {
+  width: 70px;
+  height: 100px;
+}
+
+.image--extra-small {
+  width: 43.3px;
+  height: 60px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-start;
+  background: lightgray;
+}
+
+.patterns {
+  display: flex;
+  justify-content: flex-start;
+  /* width: 1280px; */
+  padding: 0 10px;
+}
+
+.patterns__lead {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  width: 200px;
+  margin: 10px 0;
+}
+
+.pattern-button {
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background: #ededed;
+  margin: 5px;
+  /* width: 180px; */
+  height: 95px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 5px;
+}
+
+.pattern-button:hover,
+.pattern-button:focus,
+.pattern-button:active {
+  outline: 1px solid skyblue;
+  background-color: rgb(217, 223, 229);
+}
+
+.patternBtn__image {
+  display: block;
+  height: 80px;
+}
+
+#picture6 {
+  left: 300px;
+  top: 20px;
+}
+
+#picture4 {
+  left: 155px;
+  top: 0;
+}
+
+#picture9 {
+  left: 480px;
+  top: 130px;
+}
+
+#picture5 {
+  left: 155px;
+  top: 178px;
+
+  /* width: 133px;
+  height: 100px; */
+}
+
+#picture1 {
+  left: 10px;
+  top: 50px;
+}
+
+/* #picture5{
+  width: 133px;
+  height: 100px;
+} */
+
+#picture7 {
+  left: 480px;
+  top: 13px;
+}
+
+#picture3 {
+  left: 73px;
+  top: 160px;
+}
+
+#picture8 {
+  left: 560px;
+  top: 53px;
+}
+
+#picture2 {
+  left: 10px;
+  top: 163px;
+}
+
+.picture-ruler:hover,
+.picture-ruler:focus {
+  outline: 1px solid skyblue;
+  background-color: #e7f4fa;
+}
+
+.picture-parameter {
+  display: block;
+}
+
+.frame {
+  border-width: 10px;
+  border-style:  solid;
+  border-color: #ffffff;
+  /* border-image: url('../img/gold2.png') 5% 5%; */
+}
+
+.frame .image {
+  box-shadow: #06060638 -1px -1px 1px 1px;
+}
+
+.frame .passe-partout {
+  box-shadow: #06060638 -1px -1px 1px 1px,
+            rgba(1, 1, 1, 0.3) 1px 1px 2px 0px inset;
+}
+
+.passe-partout {
+   /* Свойства для задания паспарту */
+  /* padding: 20px;
+  background-clip: content-box;
+
+  box-shadow: inset 0 0 0 20px white; */
+  border: 20px solid whitesmoke;
+  box-shadow:rgba(1, 1, 1, 0.3) 1px 1px 2px 0px inset;
+}
+

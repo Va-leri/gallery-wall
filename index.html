@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gallery wall</title>
+  <!-- <link href="css/normalize.min.css" rel="stylesheet"> -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+    <section class="patterns">
+      <p class="patterns__lead">Выберите понравившийся шаблон:</p>
+      <a href="#page-main" id="patternBtn1" class="pattern-button pattern-button--1">
+        <img src="img/pattern1.png" alt="Раскладка 1" height="80" class="patternBtn__image">
+      </a>
+      <a href="#page-main" id="patternBtn2" class="pattern-button pattern-button--2">
+        <img src="img/pattern2.png" alt="Раскладка 2" height="80" class="patternBtn__image">
+      </a>
+      <a href="#page-main" id="patternBtn3" class="pattern-button pattern-button--3">
+        <img src="img/pattern3.png" alt="Раскладка 3" height="80" class="patternBtn__image">
+      </a>
+    </section>
+  </header>
+  <main class="page-main" id="page-main">
+    <form class="rulers">
+      <fieldset class="rulers__wall">
+        <label for="wallpaper-ruler">Цвет стен</label>
+        <input type="color" name="wallpaper" id="wallpaper-ruler" value="#e7eaf2">
+      </fieldset>
+      <fieldset class="rulers__common picture-ruler">
+        <label for="frames" class="picture-parameter">Добавить рамки
+          <input type="checkbox" name="frames" id="frames" class="frame">
+        </label>
+        <label for="framesColor" class="picture-parameter hidden">Цвет рамок
+          <input type="color" name="framesColor" id="framesColor" class="frame-color" value="#ffffff">
+        </label>
+        <label for="passe-partouts" class="picture-parameter">Добавить паспарту
+          <input type="checkbox" name="passe-partouts" id="passe-partouts" class="passe-partout">
+        </label>
+      </fieldset>
+      <section class="rulers__picture"></section>
+    </form>
+    <div class="wall">
+      <p class="gallery-size"></p>
+      <form class="gallery-area">
+
+      </form>
+    </div>
+  </main>
+  <footer id='page-footer'></footer>
+
+  <template id="picture-rulers">
+    <fieldset class="picture-ruler" id="picture-ruler">
+      <p class="picture-number"></p>
+      <label for="frame" class="picture-parameter">Рамка
+        <input type="checkbox" name="frame" id="frame" class="frame">
+      </label>
+      <label for="frame-color" class="picture-parameter hidden">Цвет рамки
+        <input type="color" name="frame-color" id="frame-color" class="frame-color" value="#ffffff">
+      </label>
+      <label for="passe-partout" class="picture-parameter">Паспарту
+        <input type="checkbox" name="passe-partout" id="passe-partout" class="passe-partout">
+      </label>
+    </fieldset>
+  </template>
+
+  <template id="column-template">
+    <div class="column" id="column"></div>
+  </template>
+
+  <template id="picture-template">
+    <div class="picture" id="picture">
+      <input class="hidden" type="file" name="input" id="input">
+      <label id="img" for="input" class="image">
+        <p class="image-size"></p>
+      </label>
+      <!-- <p class="picture-number"></p> -->
+    </div>
+  </template>
+
+  <script src="js/util.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/image.js"></script>
+  <script src="js/pictures.js"></script>
+  <script src="js/pattern.js"></script>
+  <script src="js/rulers.js"></script>
+  <script src="js/draganddrop.js"></script>
+</body>
