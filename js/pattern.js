@@ -116,6 +116,9 @@
       input.id = inputID;
       var image = picture.querySelector('.image');
       image.htmlFor = inputID;
+      var overflowBlock = picture.querySelector('.overflow');
+      var pictureNumberBlock = overflowBlock.querySelector('.picture-number');
+      pictureNumberBlock.insertAdjacentText('afterbegin', pictureNumber);
       // Определяем, какого размера должна быть картина в соответствии с шаблоном
       var imageSize = pattern.picturesToImageSize[pictureNumber];
       // Добавляем соответствующий класс изображению
@@ -152,6 +155,7 @@
     window.rulers.render(evt);
     window.rulers.setHandlers();
     window.pictures.setSizes();
+    window.pictures.setPictureNumberSize();
     window.script.renderRulers();
   }
 

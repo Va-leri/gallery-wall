@@ -35,5 +35,12 @@
         picturesParameters[index] = pictureParameters;
       });
     },
+    setPictureNumberSize: function () {
+      window.pictures.blocks.forEach(function (picture) {
+        var pictureNumberBlock = picture.querySelector('.picture-number');
+        var pictureHeight = picture.offsetHeight;
+        pictureNumberBlock.style['font-size'] = (pictureHeight * 0.7) + 'px';
+      })
+    }
   };
 })();
