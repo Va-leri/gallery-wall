@@ -12,9 +12,9 @@
     blocks: pictures,
     setSizes: function () {
       window.pictures.blocks = gallery.querySelectorAll('.picture');
-      window.pictures.blocks.forEach(function (element, index) {
+      window.pictures.blocks.forEach(function (picture, index) {
         // Сохраняем элементы image в соответствующий массив:
-        images[index] = element.querySelector('.image');
+        images[index] = picture.querySelector('.image');
         var image = images[index];
         // Сохраняем параметры картины
         var pictureParameters = {
@@ -33,14 +33,11 @@
         var imageSizeBlock = image.querySelector('.image-size');
         imageSizeBlock.insertAdjacentText('afterbegin', widthInSm + ' x ' + heightInSm);
         picturesParameters[index] = pictureParameters;
+
+        var pictureNumberBlock = picture.querySelector('.picture-number');
+        var imageHeight = image.offsetHeight;
+        pictureNumberBlock.style['font-size'] = (imageHeight * 0.7) + 'px';
       });
     },
-    setPictureNumberSize: function () {
-      window.pictures.blocks.forEach(function (picture) {
-        var pictureNumberBlock = picture.querySelector('.picture-number');
-        var pictureHeight = picture.offsetHeight;
-        pictureNumberBlock.style['font-size'] = (pictureHeight * 0.7) + 'px';
-      })
-    }
   };
 })();

@@ -155,7 +155,7 @@
     window.rulers.render(evt);
     window.rulers.setHandlers();
     window.pictures.setSizes();
-    window.pictures.setPictureNumberSize();
+    // window.pictures.setPictureNumberSize();
     window.script.renderRulers();
   }
 
